@@ -77,6 +77,7 @@ public class QuestionService {
     }
 
     public ResponseEntity<Integer> getScore(List<Response> responses) {
+
         int right=0;
         for(Response response : responses){
             Question question = questionDao.findById(response.getId()).get();
